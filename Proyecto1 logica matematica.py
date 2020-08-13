@@ -9,6 +9,7 @@
 # Cierres Transitivos de un grafo
 
 # Se define la matriz de adyacencia del grafo 
+
 graph = [[0, 0, 1, 1],
         [1, 0, 0, 0],
         [0, 1, 0, 0],
