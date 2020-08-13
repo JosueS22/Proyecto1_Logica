@@ -10,9 +10,13 @@
 
 # Se define la matriz de adyacencia del grafo 
 graph = [[0, 0, 0, 1],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
+        [0, 0, 1, 1],
+        [0, 1, 0, 0],
         [0, 1, 0, 1]]
+
+print("\nMatriz de adyacencia del grafo")
+for i in graph:
+    print(i)
 
 # El algoritmo de Warshall recibe como parametros la cantidad de vertices 
 # y la matriz de adyacencia
@@ -40,11 +44,11 @@ def boolean_matrix(v, graph1, graph2, initial_graph = [[0, 0, 0, 0],[0, 0, 0, 0]
         boolean_matrix(v, actual_graph, graph1, actual_graph)
 
 transitiveClosure_graph = warshall_algorithm(len(graph), graph)
-print("\nCierre transitivo utilizando el algoritmo de Warshall: \n")
+print("\nCierre transitivo utilizando el algoritmo de Warshall:")
 for i in transitiveClosure_graph:
     print(i)
 
 transitiveClosure_graph = boolean_matrix(len(graph), graph, graph)
-print("\nCierre transitivo utilizando matrices booleanas: \n")
+print("\nCierre transitivo utilizando matrices booleanas:")
 for r in transitiveClosure_graph:
     print(r)
